@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/courses
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    testWhileIdle: true
+    validationQuery: SELECT 1
+    driver-class-named: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
